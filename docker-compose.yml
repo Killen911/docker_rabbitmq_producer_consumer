@@ -7,22 +7,13 @@ services:
     ports:
       - '5672:5672'
       - '15672:15672'
-    networks:
-      - network
 
   consumer:
     build: consumer
     environment:
       HOST_IP: '192.168.99.100'
-    networks:
-      - network
 
   producer:
     build: producer
     environment:
       HOST_IP: '192.168.99.100'
-    networks:
-      - network
-
-networks:
-  network: {}
