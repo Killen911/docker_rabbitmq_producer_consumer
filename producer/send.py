@@ -17,5 +17,5 @@ for i in range(10):
 		channel.basic_publish(exchange='', routing_key='lanit', body=msg)
 		print(" [x] Sent {}".format(msg))
 		time.sleep(1)
-
+channel.basic_publish(exchange='', routing_key='lanit', body='')
 connection.close()
